@@ -63,10 +63,10 @@ def index():
                     review_col = db['image_scrap_data']
                     review_col.insert_many(img_data)          
 
-                    return "image laoded"
+                    return "Incorrect image"
                 except Exception as e:
                     logging.info(e)
-                    return 'something is wrong'
+                    return 'Image loaded '
             # return render_template('results.html')
 
     else:
@@ -74,4 +74,5 @@ def index():
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8000)
+    app.run(host='0.0.0.0', port=5000,debug=True)
+
